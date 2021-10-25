@@ -21,7 +21,7 @@ export default NextAuth({
         })
     ],
     jwt: {
-        signingKey: process.env.JWT_SIGNING_KEY,
+        signingKey: Buffer.from(process.env.JWT_SIGNING_KEY || '', 'base64').toString('ascii'),
         verificationOptions: {
             algorithms: ['PS256']
         }
