@@ -5,7 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import {AccountCircle} from "@mui/icons-material";
-import {Menu, MenuItem} from "@mui/material";
+import {Container, Menu, MenuItem} from "@mui/material";
 import React from "react";
 
 export default function Layout({ children }: any) {
@@ -65,7 +65,10 @@ export default function Layout({ children }: any) {
                     </Toolbar>
                 </AppBar>
             </Box>
-            {children}
+
+            <Container sx={{ marginTop: 2 }}>
+                {children}
+            </Container>
         </>
     )
 }
